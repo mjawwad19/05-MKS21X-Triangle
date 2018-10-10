@@ -5,14 +5,16 @@ public class Triangle {
       p1 = one.copy();
       p2 = two.copy();
       p3 = three.copy();
-      /*if (pointCheck()) {System.out.println("Triangle created");}
-      else {System.out.println("not a triangle");}*/
+      if (pointCheck()) {System.out.println("Triangle created");}
+      else {System.out.println("not a triangle but I'm a silly constructor who can't say no");}
     }
 
     public Triangle(double x1, double y1, double x2, double y2, double x3, double y3) {
       p1 = new Point(x1,y1);
       p2 = new Point(x2,y2);
       p3 = new Point(x3,y3);
+      if (pointCheck()) {System.out.println("Triangle created");}
+      else {System.out.println("not a triangle but I'm a silly constructor who can't say no");}
     }
 
     public Point getVertex(int index) {
@@ -27,19 +29,20 @@ public class Triangle {
       else { p3 = newP;}
     }
 
-    /*public boolean pointCheck() {
+    public boolean pointCheck() {
       if (p1.distanceTo(p2) == 0 || p2.distanceTo(p3) == 0 || p1.distanceTo(p3) == 0) {return false;}
-      else if(p1.getXCor() == p2.getXCor() && p2.getXCor() == p3.getXCor()) {return false;}
-      else if(p1.getYCor() == p2.getYCor() && p2.getYCor() == p3.getYCor()) {return false;}
+      else if(p1.getX() == p2.getX() && p2.getX() == p3.getX()) {return false;}
+      else if(p1.getY() == p2.getY() && p2.getY() == p3.getY()) {return false;}
       else {return true;}
     }
-    */
+
 
     public double getPerimeter() {
       double sum = p1.distanceTo(p2) + p2.distanceTo(p3) + p3.distanceTo(p1);
-      //if (p1.distanceTo(p2) != 0 && p2.distanceTo(p3) != 0 && p3.distanceTo(p1) != 0) {return sum;}
-      //else {
-      return sum;
+      if (this.pointCheck()) {return sum;}
+      else {
+        System.out.print("This IS NOT a triangle GRR!");
+        return 0.0;}
     }
 
     public String toString() {
