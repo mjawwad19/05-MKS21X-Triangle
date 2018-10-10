@@ -6,12 +6,15 @@ public class Driver {
     Point d = new Point(0,0);
     Point e = new Point(1,4);
     Point f = new Point(0,5);
-    Triangle abc = new Triangle (a,b,c);
+
+    //Triangle abc = new Triangle (a,b,c);
+    Triangle abc = new Triangle (0,0,0,4,3,0);
     Triangle bcd = new Triangle (b,c,d);
     Triangle cde = new Triangle (c,d,e);
     Triangle dea = new Triangle (d,e,a);
     Triangle abf = new Triangle (a,b,f);
-    System.out.println(a);
+
+    /*System.out.println(a);
     System.out.println(b);
     System.out.println(c);
     System.out.println(d);
@@ -23,7 +26,15 @@ public class Driver {
     System.out.println(cde);
     System.out.println(dea);
     System.out.println(abf);
-    
+
+    System.out.println(abc.getVertex(0));
+    System.out.println(abc.getVertex(1));
+    System.out.println(abc.getVertex(2));
+
+    abc.setVertex(0,b);
+    System.out.println(abc.getVertex(0));
+    System.out.println(abc);*/
+
     System.out.println(a.distanceTo(b)); //4
     System.out.println(a.distanceTo(c)); //3
     System.out.println(a.distanceTo(d)); //0.0
