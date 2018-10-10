@@ -43,6 +43,6 @@ public class Triangle {
     }
 
     public String toString() {
-      return "Triangle: " + p1.toString() + " " + p2.toString() + " " + p3.toString();
+      return "Triangle: A" + p1.toString() + " B" + p2.toString() + " C" + p3.toString();
     }
 }
