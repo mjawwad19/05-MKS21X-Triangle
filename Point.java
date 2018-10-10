@@ -40,6 +40,6 @@ public class Point {
   }
 
   public String toString() {
-    return "" + this + "(" + this.x + "," + this.y + ")";
+    return "" + "(" + this.x + "," + this.y + ")";
   }
 }
