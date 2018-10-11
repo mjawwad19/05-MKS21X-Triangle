@@ -31,7 +31,7 @@ public class Point {
     return d;
     }
 
-  public double distance(Point p1, Point p2) {
+  public static double distance(Point p1, Point p2) {
     double d;
     double xDiff = p2.x - p1.x;
     double yDiff = p2.y - p1.y;
